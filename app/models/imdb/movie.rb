@@ -13,6 +13,12 @@ class Movie
         @@all
     end
 
+    def self.movie_names
+        self.all.map do |movie|
+            movie.name
+        end
+    end
+
     # Return all characters in a movie
     def characters
         all_movie_char = MovieCharacter.all.select do |moviecharacter|
@@ -39,7 +45,10 @@ class Movie
 
     #Return movie with the most actors in it
     def self.most_actors
-        # Loop through moviecharacter table
-        # Find 
+        # Loop through all self.actors
+        # Return method with the longest array of actors
+        self.all.max_by do |movie|
+            movie.actors.length
+        end
     end
 end

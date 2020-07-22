@@ -27,6 +27,7 @@ friends = Show.new("Friends")
 phoebe = Character.new("Phoebe Buffay", lisa_kudrow)
 phoebe_friends = ShowCharacter.new(phoebe, friends)
 
+mi_tv = Show.new("Mission Impossible")
 
 laura_sobel = Character.new("Laura Sobel", lisa_kudrow)
 laura_sobel_at = MovieCharacter.new(analyze_this, laura_sobel)
